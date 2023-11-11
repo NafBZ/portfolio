@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    My Blog
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post.css" %}">
+    <link rel="stylesheet" href="{% static "blog/index.css" %}">
+{% endblock  %}
+
+{% block content %}
+<section id="welcome">
+    <header>
+        <img src="{% static "blog/images/nafees.jpeg" %}" alt="Author">
+        <h2>Nafees Blog</h2>
+    </header>
+    <p>
+        By profession, I talk to Robots and attempt to figure out how they See me.
+        By nature, I prefer discussions about Deep Learning with humans.
+    </p>
+</section>
+<section id="latest-posts">
+    <h2>Latest Thoughts</h2>
+    <ul>
+        {% for post in posts %}
+            {% include "blog/includes/post.html" %}
+        {% endfor %}
+    </ul>
+</section>
+
+<section id="about">
+    <h2>What I Do</h2>
+    <p>I love Learning New Things</p>
+    <p>Python is my strong point</p>
+</section>
+{% endblock  %}
