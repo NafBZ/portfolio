@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+    Post Title
+{% endblock %}
+
+{% block css_files %}
+    <link rel="stylesheet" href="{% static "blog/post-detail.css" %}">
+{% endblock  %}
+
+{% block content %}
+
+<section id="summary">
+    <h2>Post Title</h2>
+        <article>
+            <img src="{% static "blog/images/av.png" %}" alt="">
+            <address>Nafees Bin Zaman</address>
+            <div>
+                Last Updated on <time> 28th October </time>
+            </div>
+        </article>
+</section>
+
+<main>
+    <p>
+        A statistical way of comparing two (or more) techniques—the A and the B.
+        Typically, the A is an existing technique, and the B is a new technique.
+        A/B testing not only determines which technique performs better but also
+        whether the difference is statistically significant. A/B testing usually
+        compares a single metric on two techniques; for example, how does model
+        accuracy compare for two techniques? However, A/B testing can also compare
+        any finite number of metrics.
+    </p>
+</main>
+
+{% endblock  %}

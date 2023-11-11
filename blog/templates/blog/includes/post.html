@@ -1,0 +1,19 @@
+{% load static %}
+
+<li>
+    <article class="post">
+        <a href="{% url "post-detail-page" "the-mountains" %}">
+            <img src="{% static "blog/images/av.png" %}" alt="Nice photo">
+            <div class="post__content">
+                <h3>
+                    About Me
+                </h3>
+                <p>
+                    Doing master's thesis on active perception for robotics grasping utilizing
+                    3D deep learning, a part of the Joint Master's degree program in Intelligent
+                    Field Robotic Systems at the University de Girona, Spain, and the University of Zagreb, Croatia.
+                </p>
+            </div>
+        </a>
+    </article>
+</li>
